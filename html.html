@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICSE Class 10 - Computer Education Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">CompLearn Hub</div>
+            <div class="nav-links">
+                <a href="#home-section" class="nav-link active" data-section="home">Home</a>
+                <a href="#lab-section" class="nav-link" data-section="lab">Virtual Lab</a>
+                <a href="#java-section" class="nav-link" data-section="java">Java Portal</a>
+                <a href="#cyber-section" class="nav-link" data-section="cyber">Cyber Safety</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home-section" class="section home-section active">
+        <div class="container">
+            <div class="hero">
+                <h1>Welcome to CompLearn Hub</h1>
+                <p>Your Interactive Learning Platform for ICSE Class 10 Computer Science</p>
+            </div>
+            
+            <div class="modules-grid">
+                <div class="module-card" onclick="navigateToModule('lab')">
+                    <div class="module-icon">🖥️</div>
+                    <h2>Virtual Computer Lab</h2>
+                    <p>Explore computer hardware components: CPU, Memory, I/O Devices, and Operating Systems</p>
+                    <button class="btn btn-primary">Start Learning</button>
+                </div>
+
+                <div class="module-card" onclick="navigateToModule('java')">
+                    <div class="module-icon">☕</div>
+                    <h2>Smart Java Portal</h2>
+                    <p>Learn Java programming: Variables, Loops, Conditionals, Arrays, and Functions</p>
+                    <button class="btn btn-primary">Start Coding</button>
+                </div>
+
+                <div class="module-card" onclick="navigateToModule('cyber')">
+                    <div class="module-icon">🔒</div>
+                    <h2>Cyber Safety Simulator</h2>
+                    <p>Learn about online threats: Phishing, Weak Passwords, and Online Scams</p>
+                    <button class="btn btn-primary">Start Simulator</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Computer Lab Section -->
+    <section id="lab-section" class="section lab-section">
+        <div class="container">
+            <h1>Virtual Computer Lab</h1>
+            
+            <div class="lab-content">
+                <div class="topics-sidebar">
+                    <h3>Topics</h3>
+                    <button class="topic-btn active" data-topic="io-devices">Input/Output Devices</button>
+                    <button class="topic-btn" data-topic="memory">Memory</button>
+                    <button class="topic-btn" data-topic="cpu">CPU (Processor)</button>
+                    <button class="topic-btn" data-topic="os">Operating System</button>
+                </div>
+
+                <div class="content-area">
+                    <!-- I/O Devices -->
+                    <div class="topic-content active" id="io-devices">
+                        <h2>Input/Output Devices</h2>
+                        <div class="content-box">
+                            <h3>What are I/O Devices?</h3>
+                            <p>Input/Output devices are hardware components that allow data to enter and exit a computer system.</p>
+                            
+                            <h4>Input Devices</h4>
+                            <ul>
+                                <li><strong>Keyboard:</strong> Used to type text and commands</li>
+                                <li><strong>Mouse:</strong> Controls cursor position on screen</li>
+                                <li><strong>Scanner:</strong> Converts physical documents into digital form</li>
+                                <li><strong>Microphone:</strong> Captures audio input</li>
+                            </ul>
+
+                            <h4>Output Devices</h4>
+                            <ul>
+                                <li><strong>Monitor:</strong> Displays visual information</li>
+                                <li><strong>Printer:</strong> Produces hard copies of digital documents</li>
+                                <li><strong>Speaker:</strong> Produces audio output</li>
+                                <li><strong>Projector:</strong> Projects images on a larger screen</li>
+                            </ul>
+
+                            <div class="example-box">
+                                <h4>Example:</h4>
+                                <p>When you type on a keyboard (input), the text appears on the monitor (output). This is a complete I/O operation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memory -->
+                    <div class="topic-content" id="memory">
+                        <h2>Memory</h2>
+                        <div class="content-box">
+                            <h3>Types of Computer Memory</h3>
+                            <p>Memory is used to store data and programs. There are two main types:</p>
+                            
+                            <h4>RAM (Random Access Memory)</h4>
+                            <ul>
+                                <li>Temporary storage for running programs</li>
+                                <li>Loses all data when computer is turned off</li>
+                                <li>Much faster than permanent storage</li>
+                                <li>Measured in GB (Gigabytes)</li>
+                            </ul>
+
+                            <h4>ROM (Read Only Memory)</h4>
+                            <ul>
+                                <li>Permanent storage for essential system instructions</li>
+                                <li>Cannot be modified by users</li>
+                                <li>Retains data even when power is off</li>
+                            </ul>
+
+                            <h4>Hard Drive/SSD</h4>
+                            <ul>
+                                <li>Permanent storage for files and programs</li>
+                                <li>Much larger capacity than RAM</li>
+                                <li>Slower access than RAM but retains data</li>
+                            </ul>
+
+                            <div class="example-box">
+                                <h4>Memory Comparison:</h4>
+                                <p>If a computer has 8GB RAM and a 256GB SSD: RAM holds temporary data while running programs, and the SSD stores all your files permanently.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CPU -->
+                    <div class="topic-content" id="cpu">
+                        <h2>CPU (Central Processing Unit)</h2>
+                        <div class="content-box">
+                            <h3>The Brain of the Computer</h3>
+                            <p>The CPU executes all instructions and controls all other components of the computer.</p>
+                            
+                            <h4>Main Functions:</h4>
+                            <ul>
+                                <li><strong>Fetch:</strong> Retrieve instructions from memory</li>
+                                <li><strong>Decode:</strong> Understand what the instruction means</li>
+                                <li><strong>Execute:</strong> Perform the required operation</li>
+                                <li><strong>Store:</strong> Save the result back to memory</li>
+                            </ul>
+
+                            <h4>CPU Specifications:</h4>
+                            <ul>
+                                <li><strong>Clock Speed:</strong> Measured in GHz (Gigahertz) - determines how fast it processes</li>
+                                <li><strong>Cores:</strong> Multiple cores allow parallel processing</li>
+                                <li><strong>Cache:</strong> Very fast memory built into the CPU</li>
+                            </ul>
+
+                            <div class="example-box">
+                                <h4>Example:</h4>
+                                <p>A modern CPU with 8 cores running at 3.5 GHz can process 8 instructions simultaneously at 3.5 billion operations per second.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Operating System -->
+                    <div class="topic-content" id="os">
+                        <h2>Operating System</h2>
+                        <div class="content-box">
+                            <h3>What is an Operating System?</h3>
+                            <p>An operating system (OS) is software that manages hardware resources and enables user-application interaction.</p>
+                            
+                            <h4>Main Functions:</h4>
+                            <ul>
+                                <li><strong>Resource Management:</strong> Allocates CPU, memory, and disk space</li>
+                                <li><strong>User Interface:</strong> Provides graphical or command-line interface</li>
+                                <li><strong>File Management:</strong> Organizes and manages files and folders</li>
+                                <li><strong>Security:</strong> Protects system from unauthorized access</li>
+                                <li><strong>Device Control:</strong> Manages printers, monitors, and other devices</li>
+                            </ul>
+
+                            <h4>Common Operating Systems:</h4>
+                            <ul>
+                                <li><strong>Windows:</strong> Most popular for personal computers</li>
+                                <li><strong>macOS:</strong> Used in Apple computers</li>
+                                <li><strong>Linux:</strong> Open-source OS used in servers</li>
+                                <li><strong>Android/iOS:</strong> Mobile operating systems</li>
+                            </ul>
+
+                            <div class="example-box">
+                                <h4>Example:</h4>
+                                <p>When you click a file, the OS locates it on the hard drive, loads it into RAM, and tells the CPU to open it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary" onclick="goHome()">← Back to Home</button>
+        </div>
+    </section>
+
+    <!-- Smart Java Portal Section -->
+    <section id="java-section" class="section java-section">
+        <div class="container">
+            <h1>Smart Java Learning Portal</h1>
+            
+            <div class="java-content">
+                <div class="java-topics-sidebar">
+                    <h3>Topics</h3>
+                    <button class="java-topic-btn active" data-java-topic="variables">Variables</button>
+                    <button class="java-topic-btn" data-java-topic="ifelse">If-Else</button>
+                    <button class="java-topic-btn" data-java-topic="loops">Loops</button>
+                    <button class="java-topic-btn" data-java-topic="arrays">Arrays</button>
+                    <button class="java-topic-btn" data-java-topic="functions">Functions</button>
+                </div>
+
+                <div class="java-work-area">
+                    <!-- Variables -->
+                    <div class="java-topic-box active" id="java-variables">
+                        <h2>Variables</h2>
+                        <p>Variables are containers that store data values. In Java, we must declare the data type.</p>
+                        
+                        <div class="java-code-box">
+                            <h3>Java Code:</h3>
+                            <pre><code>int age = 25;
+String name = "Arjun";
+double price = 99.99;
+System.out.println("Name: " + name);
+System.out.println("Age: " + age);
+System.out.println("Price: " + price);</code></pre>
+                        </div>
+
+                        <div class="java-input-section">
+                            <h3>Try It Yourself:</h3>
+                            <div class="input-group">
+                                <label>Your Name:</label>
+                                <input type="text" id="var-name" placeholder="Enter your name" value="Student">
+                            </div>
+                            <div class="input-group">
+                                <label>Your Age:</label>
+                                <input type="number" id="var-age" placeholder="Enter your age" value="15">
+                            </div>
+                            <div class="input-group">
+                                <label>Favorite Number:</label>
+                                <input type="number" id="var-number" placeholder="Enter a number" value="7">
+                            </div>
+                            <button class="btn btn-success" onclick="executeVariables()">Run Code</button>
+                        </div>
+
+                        <div class="java-output-section" id="var-output" style="display: none;">
+                            <h3>Output:</h3>
+                            <pre id="var-result"></pre>
+                        </div>
+                    </div>
+
+                    <!-- If-Else -->
+                    <div class="java-topic-box" id="java-ifelse">
+                        <h2>If-Else Statements</h2>
+                        <p>If-else statements allow your program to make decisions based on conditions.</p>
+                        
+                        <div class="java-code-box">
+                            <h3>Java Code:</h3>
+                            <pre><code>int marks = 75;
+if (marks >= 90) {
+    System.out.println("Grade: A");
+} else if (marks >= 75) {
+    System.out.println("Grade: B");
+} else if (marks >= 60) {
+    System.out.println("Grade: C");
+} else {
+    System.out.println("Grade: F");
+}</code></pre>
+                        </div>
+
+                        <div class="java-input-section">
+                            <h3>Try It Yourself:</h3>
+                            <div class="input-group">
+                                <label>Enter Marks (0-100):</label>
+                                <input type="number" id="if-marks" placeholder="Enter marks" value="85" min="0" max="100">
+                            </div>
+                            <button class="btn btn-success" onclick="executeIfElse()">Run Code</button>
+                        </div>
+
+                        <div class="java-output-section" id="if-output" style="display: none;">
+                            <h3>Output:</h3>
+                            <pre id="if-result"></pre>
+                        </div>
+                    </div>
+
+                    <!-- Loops -->
+                    <div class="java-topic-box" id="java-loops">
+                        <h2>Loops</h2>
+                        <p>Loops allow you to repeat a block of code multiple times.</p>
+                        
+                        <div class="java-code-box">
+                            <h3>Java Code (For Loop Example):</h3>
+                            <pre><code>for (int i = 1; i <= 5; i++) {
+    System.out.println("Number: " + i);
+}
+System.out.println("Loop completed!");</code></pre>
+                        </div>
+
+                        <div class="java-input-section">
+                            <h3>Try It Yourself:</h3>
+                            <div class="input-group">
+                                <label>Enter a Number:</label>
+                                <input type="number" id="loop-number" placeholder="Enter number" value="5" min="1" max="20">
+                            </div>
+                            <button class="btn btn-success" onclick="executeLoops()">Run Code</button>
+                        </div>
+
+                        <div class="java-output-section" id="loop-output" style="display: none;">
+                            <h3>Output (Multiplication Table):</h3>
+                            <pre id="loop-result"></pre>
+                        </div>
+                    </div>
+
+                    <!-- Arrays -->
+                    <div class="java-topic-box" id="java-arrays">
+                        <h2>Arrays</h2>
+                        <p>Arrays are used to store multiple values of the same data type.</p>
+                        
+                        <div class="java-code-box">
+                            <h3>Java Code:</h3>
+                            <pre><code>int[] numbers = {10, 20, 30, 40, 50};
+int sum = 0;
+for (int i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+System.out.println("Sum: " + sum);
+System.out.println("Average: " + (sum / numbers.length));</code></pre>
+                        </div>
+
+                        <div class="java-input-section">
+                            <h3>Try It Yourself:</h3>
+                            <div class="input-group">
+                                <label>Enter 5 Numbers (comma-separated):</label>
+                                <input type="text" id="array-numbers" placeholder="e.g., 10, 20, 30, 40, 50" value="10, 20, 30, 40, 50">
+                            </div>
+                            <button class="btn btn-success" onclick="executeArrays()">Run Code</button>
+                        </div>
+
+                        <div class="java-output-section" id="array-output" style="display: none;">
+                            <h3>Output:</h3>
+                            <pre id="array-result"></pre>
+                        </div>
+                    </div>
+
+                    <!-- Functions -->
+                    <div class="java-topic-box" id="java-functions">
+                        <h2>Functions (Methods)</h2>
+                        <p>Functions are reusable blocks of code that perform specific tasks.</p>
+                        
+                        <div class="java-code-box">
+                            <h3>Java Code:</h3>
+                            <pre><code>static int add(int a, int b) {
+    return a + b;
+}
+
+static int multiply(int a, int b) {
+    return a * b;
+}
+
+System.out.println("Sum: " + add(15, 10));
+System.out.println("Product: " + multiply(15, 10));</code></pre>
+                        </div>
+
+                        <div class="java-input-section">
+                            <h3>Try It Yourself:</h3>
+                            <div class="input-group">
+                                <label>First Number:</label>
+                                <input type="number" id="func-num1" placeholder="Enter first number" value="5">
+                            </div>
+                            <div class="input-group">
+                                <label>Second Number:</label>
+                                <input type="number" id="func-num2" placeholder="Enter second number" value="3">
+                            </div>
+                            <button class="btn btn-success" onclick="executeFunctions()">Run Code</button>
+                        </div>
+
+                        <div class="java-output-section" id="func-output" style="display: none;">
+                            <h3>Output:</h3>
+                            <pre id="func-result"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary" onclick="goHome()">← Back to Home</button>
+        </div>
+    </section>
+
+    <!-- Cyber Safety Simulator Section -->
+    <section id="cyber-section" class="section cyber-section">
+        <div class="container">
+            <h1>Cyber Safety Simulator</h1>
+            <p class="section-intro">Learn about common online threats and make safe choices!</p>
+            
+            <div class="scenario-buttons">
+                <button class="btn btn-primary" onclick="startScenario('phishing')">Phishing Attack</button>
+                <button class="btn btn-primary" onclick="startScenario('password')">Password Strength</button>
+                <button class="btn btn-primary" onclick="startScenario('scam')">Online Scam</button>
+            </div>
+
+            <div class="scenario-content">
+                <!-- Phishing Scenario -->
+                <div class="scenario-detail" id="phishing-detail">
+                    <h2>Scenario 1: Phishing Attack</h2>
+                    <div class="scenario-box">
+                        <p><strong>Email Received:</strong></p>
+                        <div class="email-box">
+                            <p><strong>From:</strong> security@bank-secure.com</p>
+                            <p><strong>Subject:</strong> URGENT: Verify Your Account Now!</p>
+                            <p>Dear Customer,<br>
+                            We have detected suspicious activity on your account. Please click the link below to verify your identity immediately:</p>
+                            <p><a href="#" style="color: #4f46e5; text-decoration: underline;">Click Here to Verify Account</a></p>
+                            <p>If you don't verify within 24 hours, your account will be suspended.</p>
+                            <p>Best Regards,<br>Bank Security Team</p>
+                        </div>
+                    </div>
+
+                    <h3>What should you do?</h3>
+                    <button class="btn btn-danger" onclick="showPhishingResult('click')">Click the Link</button>
+                    <button class="btn btn-success" onclick="showPhishingResult('ignore')">Don't Click - Report</button>
+                </div>
+
+                <!-- Password Scenario -->
+                <div class="scenario-detail" id="password-detail">
+                    <h2>Scenario 2: Choosing a Password</h2>
+                    <div class="scenario-box">
+                        <p><strong>You're creating a new social media account. Which password would you choose?</strong></p>
+                    </div>
+
+                    <h3>Choose a password:</h3>
+                    <button class="btn btn-danger" onclick="showPasswordResult('weak')">123456</button>
+                    <button class="btn btn-warning" onclick="showPasswordResult('medium')">MyName2024</button>
+                    <button class="btn btn-success" onclick="showPasswordResult('strong')">Tr0p!cal#Moon9</button>
+                </div>
+
+                <!-- Scam Scenario -->
+                <div class="scenario-detail" id="scam-detail">
+                    <h2>Scenario 3: Online Scam</h2>
+                    <div class="scenario-box">
+                        <p><strong>Website Ad:</strong></p>
+                        <div class="scam-box">
+                            <h3>FREE Gaming Console! 🎮</h3>
+                            <p>Congratulations! You've been selected to receive a free PlayStation 5!</p>
+                            <p>Just pay $5 for shipping and handling to confirm your address.</p>
+                            <p><strong>Offer expires in: 3 hours | Only 3 left!</strong></p>
+                            <button class="btn btn-primary">Claim Your Free Console Now</button>
+                        </div>
+                    </div>
+
+                    <h3>What would you do?</h3>
+                    <button class="btn btn-danger" onclick="showScamResult('fall')">Pay $5 and Claim It</button>
+                    <button class="btn btn-success" onclick="showScamResult('avoid')">Ignore - It's a Scam</button>
+                </div>
+
+                <!-- Results -->
+                <div class="result-section" id="phishing-result" style="display: none;">
+                    <h3 id="phishing-title"></h3>
+                    <div id="phishing-msg"></div>
+                    <button class="btn btn-secondary" onclick="resetScenario('phishing')">Try Again</button>
+                </div>
+
+                <div class="result-section" id="password-result" style="display: none;">
+                    <h3 id="password-title"></h3>
+                    <div id="password-strength"></div>
+                    <div id="password-msg"></div>
+                    <button class="btn btn-secondary" onclick="resetScenario('password')">Try Another Password</button>
+                </div>
+
+                <div class="result-section" id="scam-result" style="display: none;">
+                    <h3 id="scam-title"></h3>
+                    <div id="scam-msg"></div>
+                    <button class="btn btn-secondary" onclick="resetScenario('scam')">Try Again</button>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary" onclick="goHome()">← Back to Home</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
